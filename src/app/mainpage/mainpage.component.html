@@ -48,14 +48,16 @@
 
         <div id="popup1" id="overlay">
           <div id="popup">
-            <h2>Best Path</h2>
+            <h2>Best Path Possible :-</h2>
+            <h3>Path :-</h3>
               <ul>
                 <li *ngFor="let appl of apple">{{appl}}</li>  
               </ul>
+              <h3>Time between intermediate Stops :-</h3>
               <ul>
                 <li *ngFor="let disp of dispath">{{disp}}</li>
               </ul>
-              <h4>Time:{{time}}</h4>
+              <h4>Arrival Time:{{time}}</h4>
               <h4>Distance:{{distance}}</h4>
               <h4>Amount to b paid: <h5>{{totalPrice}}</h5></h4>
               <button style="color: black;" (click)="sendbook()">Book Now</button>
