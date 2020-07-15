@@ -1,0 +1,66 @@
+<app-overlay-main></app-overlay-main>
+<div class="container">
+        <div class="jumbotron">
+          <h1>Welcome!!!</h1>
+          <p>Please enter your Source , Destination and Approx Reaching time</p>
+        </div>
+        <form #usertravel="ngForm" (ngSubmit)="onSubmit()">
+      
+        <div class="row" id="marketing">
+          <div class="col-md-4">
+            <!-- Prepended text-->
+            <div class="form-group">
+              <div class="col-md-12">
+                <div class="input-group">     
+                  <span class="input-group-addon"><i class="fas fa-stopwatch"></i></span>
+                      <input type="time" name="reaching_time" class="form-control" [(ngModel)]='locate.reach_time'>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <!-- Prepended text-->
+            <div class="form-group">
+              <div class="col-md-12">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fas fa-map-marker-alt"></i></span>
+                  <input name="Source" class="form-control" placeholder="Source" type="text" [(ngModel)]="locate.source">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <!-- Prepended text-->
+            <div class="form-group">
+              <div class="col-md-12">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fas fa-map-marker-alt"></i></span>
+                  <input name="Destination" class="form-control" placeholder="Destination" type="text" [(ngModel)]="locate.destination">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row marketing" style="align-items: center;">
+                <button (click)="Openpopup()" style='font-size:24px'>Find Best Route <i class='fas fa-arrow-right'></i></button>
+        </div>
+        </form>
+
+        <div id="popup1" id="overlay">
+          <div id="popup">
+            <h2>Best Path</h2>
+              <ul>
+                <li *ngFor="let appl of apple">{{appl}}</li>  
+              </ul>
+              <ul>
+                <li *ngFor="let disp of dispath">{{disp}}</li>
+              </ul>
+              <h4>Time:{{time}}</h4>
+              <h4>Distance:{{distance}}</h4>
+              <h4>Amount to b paid: <h5>{{totalPrice}}</h5></h4>
+              <button style="color: black;" (click)="sendbook()">Book Now</button>
+              <a class="close" (click)="Closepopup()">&times;</a>              
+          </div>       
+  </div >
+      </div>
+      <!-- /container -->
