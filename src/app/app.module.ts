@@ -17,6 +17,7 @@ import { OverlayMainComponent } from './overlay-main/overlay-main.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { PaymentComponent } from './payment/payment.component';
 import { from } from 'rxjs';
+import { JourneysComponent } from './journeys/journeys.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import { from } from 'rxjs';
     OverlayMainComponent,
     MainpageComponent,
     PaymentComponent,
+    JourneysComponent,
   ],
   imports: [
     CommonModule,

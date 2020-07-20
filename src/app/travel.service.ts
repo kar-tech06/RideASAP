@@ -10,8 +10,10 @@ import { throwError} from 'rxjs';
   providedIn: 'root'
 })
 export class TravelService {
+_url_="http://localhost:8080/user/mybooking";
 _url='http://localhost:8080/user/result';
 url_='http://localhost:8080/user/booking';
+jrny: any;
 authToken: any;
 email="";
 total_price="";
@@ -35,6 +37,12 @@ tottime="";
   {
     return throwError(error);
   }
+
+ journey(book: Book)
+  {
+   return this.http.post<any>(this._url_, book)
+   .pipe(catchError(this.errorHandle))
+  }  
 
   loc(location: Location)
   {

@@ -17,7 +17,7 @@ export class MainpageComponent implements OnInit {
   dispath=[];
   apple= [];
   locate = new Location("","","");
-  book = new Book(this.travel.email,this.travel.source,this.travel.destination,this.travel.total_price);
+  book = new Book(this.travel.email,this.travel.source,this.travel.destination,this.travel.total_price,this.travel.arrtime,this.travel.reachTime,this.travel.tottime);
   constructor(private travel: TravelService,private router: Router) { }
 
   ngOnInit(): void {
@@ -41,6 +41,9 @@ export class MainpageComponent implements OnInit {
     this.book.destination=this.travel.destination;
     this.book.price=this.travel.total_price;
     this.book.email=this.travel.email;
+    this.book.arrtime=this.travel.arrtime;
+    this.book.reachTime=this.travel.reachTime;
+    this.book.tottime=this.travel.tottime;
     console.log(this.book);
     
     this.travel.bookinfo(this.book)

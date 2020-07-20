@@ -5,9 +5,8 @@ import {SigninComponent} from './signin/signin.component';
 import {OverlayComponent} from './overlay/overlay.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { OverlayMainComponent } from './overlay-main/overlay-main.component';
-import { pathToFileURL } from 'url';
-import { from } from 'rxjs';
 import { PaymentComponent } from './payment/payment.component';
+import { JourneysComponent } from './journeys/journeys.component';
 
 
 const routes: Routes = [
@@ -39,6 +38,10 @@ const routes: Routes = [
   {
     path:'Ticket',
     component: PaymentComponent
+  },
+  {
+    path:'Journeys',
+    component: JourneysComponent
   }
 
 ];
