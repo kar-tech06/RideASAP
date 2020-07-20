@@ -16,7 +16,7 @@ export class OverlayMainComponent implements OnInit {
     private signinDetails: SigninService,
     private travel: TravelService,
     private router: Router) { }
-    book = new Book(this.travel.email,this.travel.source,this.travel.destination,this.travel.total_price);
+    book = new Book(this.travel.email,this.travel.source,this.travel.destination,this.travel.total_price,this.travel.arrtime,this.travel.reachTime,this.travel.tottime);
   ngOnInit(): void {
   }
   onClick()
