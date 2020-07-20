@@ -7,12 +7,9 @@ import { TravelService } from '../travel.service';
   styleUrls: ['./journeys.component.scss']
 })
 export class JourneysComponent implements OnInit {
+  jrny=this.travel.jrny;
 
   constructor(private travel: TravelService) { }
-  src=[];
-  dest=[];
-  
-
   ngOnInit(): void {
   }
 
