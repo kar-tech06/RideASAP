@@ -42,7 +42,7 @@ h1 + h4 {
   padding: 50px;
 }
 
-a {
+.card {
   text-align: center;
   outline: none;
   display: inline-block;
@@ -81,7 +81,7 @@ header .btn {
   text-transform: uppercase;
 }
 
-.container a:hover{
+.container .card:hover{
   background: #FF512F;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #DD2476, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -107,14 +107,14 @@ header {
 /* SERVICES STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.services a {
+.services .card {
   padding: 25px;
   background: #fafafa;
   margin-top: 20px;
   border-radius: 4px;
 }
 
-.services a:hover {
+.services .card:hover {
   color: black;
 }
 
@@ -123,7 +123,7 @@ header {
   color: #DD2476;
 }
 
-.services a:hover span {
+.services .card:hover span {
   color: white;
 }
 
@@ -138,33 +138,39 @@ header {
 
 @media (min-width: 550px) {
 
+  .row
+  {
+    display: block;
+  }
+
+
   nav li {
     width: auto;
   }
 
-  a {
+  .card {
     box-shadow: 0 8px #DD2476;
   }
 
-  nav a {
+  nav .card {
     padding: 7px;
     border-right: 1px solid #DD2476;
     width: 80px;
   }
 
-  nav li:nth-child(2n+1) a:after {
+  nav li:nth-child(2n+1) .card:after {
     content: none;
   }
 
-  nav li:last-child a {
+  nav li:last-child .card {
     border-right: none;
   }
 
-  header a:hover, .about a:hover {
+  header a:hover, .about .card:hover {
     box-shadow: 0 8px #DD2476;
   }
 
-  header a:active, .about a:active {
+  header a:active, .about .card:active {
     box-shadow: 0 4px #DD2476;
     -webkit-transform: translateY(4px);
         -ms-transform: translateY(4px);
@@ -201,19 +207,11 @@ header {
     font-size: 2.4rem;
   }
 
-  .services a:hover {
+  .services .card:hover {
     box-shadow: 0 -8px white;
     -webkit-transform: scale(1.15);
         -ms-transform: scale(1.15);
             transform: scale(1.15);
   }
   
-  .contact ul a {
-    margin-left: 45px;
-  }
-
-  .contact ul span {
-    font-size: 3em;
-  }
-
 }
