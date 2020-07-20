@@ -50,9 +50,17 @@ export class MainpageComponent implements OnInit {
     .subscribe(
       data =>{        
         console.log('Success!',data);
+        this.travel.name=data.name;
+        this.travel.source=data.source;
+        this.travel.destination=data.destination;
+        this.travel.total_price=data.price;
+        this.travel.tottime=data.totalTime;
+        this.travel.arrtime=data.arrtime;
         this.travel.hashqr=data.ticket;
+        this.travel.reachTime=data.reachTime;
+
+
         console.log(this.travel.hashqr);
-        
         this.router.navigate(['/Ticket']);
         },
       error => console.log('Error',error)
@@ -72,7 +80,7 @@ export class MainpageComponent implements OnInit {
         this.travel.total_price=data.total_price;
         this.travel.arrtime=data.arrival_time;
         this.travel.reachTime=data.reach_time;
-        this.travel.tottime=data.total_time;        
+        this.travel.tottime=data.time_taken;        
         this.travel.distance=data.total_distance;
         // 
         this.distance=data.total_distance;
