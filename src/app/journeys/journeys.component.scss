@@ -2,7 +2,7 @@
 /* GENERAL STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.header h1 {
+.header {
   width: 100%;
   color: #fff;
   // position: absolute;
@@ -54,7 +54,7 @@ h1 + h4 {
   padding: 50px;
 }
 
-.card {
+a {
   text-align: center;
   outline: none;
   display: inline-block;
@@ -93,7 +93,7 @@ header .btn {
   text-transform: uppercase;
 }
 
-.container .card:hover{
+.container a:hover{
   background: #FF512F;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #DD2476, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -103,30 +103,17 @@ header .btn, .services {
   margin-top: 100px;
 }
 
-header {
-  padding: 80px 0 150px;
-}
-
-.about, .contact {
-  padding: 150px 0;
-}
-
-header {
-  background: url("https://unsplash.it/1080/720/?image=377") no-repeat fixed center / cover;
-  text-align: center;
-}
-
 /* SERVICES STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.services .card {
+.services a {
   padding: 25px;
   background: #fafafa;
   margin-top: 20px;
   border-radius: 4px;
 }
 
-.services .card:hover {
+.services a:hover {
   color: black;
 }
 
@@ -135,7 +122,7 @@ header {
   color: #DD2476;
 }
 
-.services .card:hover span {
+.services a:hover span {
   color: white;
 }
 
@@ -155,7 +142,7 @@ header {
     display: block;
   }
 
-  .card {
+  a {
     box-shadow: 0 8px #DD2476;
   }
 

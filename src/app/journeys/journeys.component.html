@@ -5,7 +5,7 @@
     <section class="services">
       <div class="row">
         <div class="one-half column"  *ngFor="let jorny of jrny">
-          <div href="#">
+          <a href="#">
             <h4>{{jorny.source}}-{{jorny.destination}}</h4>
             <span class="fa fa-bus"></span>
             <p>Name : {{jorny.name}}</p>
@@ -14,7 +14,7 @@
             <p>Price : {{jorny.price}}</p>
             <p>Total-time : {{jorny.totalTime}}</p>
             <p>Date : {{jorny.date}}</p>
-          </div>
+          </a>
         </div>
       
       </div><!--end of .row-->
