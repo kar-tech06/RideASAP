@@ -13,7 +13,10 @@
               <div class="col-md-12">
                 <div class="input-group">     
                   <span class="input-group-addon"><i class="fas fa-stopwatch"></i></span>
-                      <input type="time" name="reaching_time" class="form-control" [(ngModel)]='locate.reach_time'>
+                      <input type="time" name="reaching_time" class="form-control" #rtime [(ngModel)]='locate.reach_time' required>
+                      <div *ngIf="rtime.errors && (rtime.invalid && rtime.touched)" >
+                        <small class="text-danger" *ngIf="rtime.errors.required">This Field is required</small>
+                      </div>   
                 </div>
               </div>
             </div>
@@ -24,7 +27,10 @@
               <div class="col-md-12">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fas fa-map-marker-alt"></i></span>
-                  <input name="Source" class="form-control" placeholder="Source" type="text" [(ngModel)]="locate.source">
+                  <input name="Source" class="form-control" #src placeholder="Source" type="text" [(ngModel)]="locate.source" required>
+                  <div *ngIf="src.errors && (src.invalid && src.touched)" >
+                    <small class="text-danger" *ngIf="src.errors.required">This Field is required</small>
+                  </div>  
                 </div>
               </div>
             </div>
@@ -35,14 +41,17 @@
               <div class="col-md-12">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fas fa-map-marker-alt"></i></span>
-                  <input name="Destination" class="form-control" placeholder="Destination" type="text" [(ngModel)]="locate.destination">
+                  <input name="Destination" class="form-control" #dest placeholder="Destination" type="text" [(ngModel)]="locate.destination" required>
+                  <div *ngIf="dest.errors && (dest.invalid && dest.touched)" >
+                    <small class="text-danger" *ngIf="dest.errors.required">This Field is required</small>
+                  </div>  
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="row marketing" style="align-items: center;">
-                <button (click)="Openpopup()" style='font-size:24px'>Find Best Route <i class='fas fa-arrow-right'></i></button>
+                <button (click)="Openpopup()" [disabled]="usertravel.form.invalid" style='font-size:24px'>Find Best Route <i class='fas fa-arrow-right'></i></button>
         </div>
         </form>
 

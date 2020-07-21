@@ -8,13 +8,6 @@ import { TravelService } from '../travel.service';
 })
 export class JourneysComponent implements OnInit {
   jrny=this.travel.jrny;
-  name="";
-  email="";
-  age="";
-  price="";
-  totalTime="";
-  date="";
-
   constructor(private travel: TravelService) { }
   ngOnInit(): void {
   }
