@@ -1,22 +1,18 @@
-<section id="header" class="header">
-  <h1>My Journeys...</h1>
-</section>
+
   <div class="container">
     <section class="services">
       <div class="row">
-        <div class="one-half column"  *ngFor="let jorny of jrny">
-          <a href="#">
+        <div class="one-half column">
+          <a href="" *ngFor="let jorny of jrny">
             <h4>{{jorny.source}}-{{jorny.destination}}</h4>
             <span class="fa fa-bus"></span>
-            <p>Name : {{jorny.name}}</p>
-            <p>Email : {{jorny.email}}</p>
-            <p>Age : {{jorny.age}}</p>
-            <p>Price : {{jorny.price}}</p>
-            <p>Total-time : {{jorny.totalTime}}</p>
-            <p>Date : {{jorny.date}}</p>
+            <p>Name: {{jorny.name}}</p>
+            <p>Age: {{jorny.age}}</p>
+            <p>Price: {{jorny.price}}</p>
+            <p>Total-time: {{jorny.totalTime}}</p>
+            <p>Date: {{jorny.date}}</p>
           </a>
         </div>
-      
-      </div><!--end of .row-->
+      </div><!--end of .row-->   
     </section>
-  </div>
+  </div><!--end of .container-->

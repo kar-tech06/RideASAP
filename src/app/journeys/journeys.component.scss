@@ -2,18 +2,6 @@
 /* GENERAL STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.header {
-  width: 100%;
-  color: #fff;
-  // position: absolute;
-  margin: 0;
-  font-family: "Patua One", cursive;
-  text-align: center;
-  display: block;
-  margin-top: 20px;
-}
-
-
 h1, h3, h4, header .btn {
   font-weight: 700;
 }
@@ -103,6 +91,19 @@ header .btn, .services {
   margin-top: 100px;
 }
 
+header {
+  padding: 80px 0 150px;
+}
+
+.about, .contact {
+  padding: 150px 0;
+}
+
+header {
+  background: url("https://unsplash.it/1080/720/?image=377") no-repeat fixed center / cover;
+  text-align: center;
+}
+
 /* SERVICES STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -137,20 +138,33 @@ header .btn, .services {
 
 @media (min-width: 550px) {
 
-  .row
-  {
-    display: block;
+  nav li {
+    width: auto;
   }
 
   a {
     box-shadow: 0 8px #DD2476;
   }
 
-  header a:hover, .about .card:hover {
+  nav a {
+    padding: 7px;
+    border-right: 1px solid #DD2476;
+    width: 80px;
+  }
+
+  nav li:nth-child(2n+1) a:after {
+    content: none;
+  }
+
+  nav li:last-child a {
+    border-right: none;
+  }
+
+  header a:hover, .about a:hover {
     box-shadow: 0 8px #DD2476;
   }
 
-  header a:active, .about .card:active {
+  header a:active, .about a:active {
     box-shadow: 0 4px #DD2476;
     -webkit-transform: translateY(4px);
         -ms-transform: translateY(4px);
@@ -187,11 +201,19 @@ header .btn, .services {
     font-size: 2.4rem;
   }
 
-  .services .card:hover {
+  .services a:hover {
     box-shadow: 0 -8px white;
     -webkit-transform: scale(1.15);
         -ms-transform: scale(1.15);
             transform: scale(1.15);
   }
   
+  .contact ul a {
+    margin-left: 45px;
+  }
+
+  .contact ul span {
+    font-size: 3em;
+  }
+
 }
