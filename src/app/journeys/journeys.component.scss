@@ -46,7 +46,7 @@ h1 + h4 {
   font-weight: normal;
 }
 
-.row
+.row1
 {
   padding: 50px;
 }
@@ -64,11 +64,6 @@ a {
           transition: all ease .3s;
 }
 
-.btn {
-  font-size: 1.2em;
-  border-radius: 5px;
-  padding: 12px 30px;
-}
 
 .block {
   width: 130px;
@@ -77,8 +72,11 @@ a {
 }
 .one-half
 {
-  width: 40%;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  // width: 100%;
 }
 
 
@@ -147,49 +145,34 @@ header {
 
 @media (min-width: 550px) {
 
-  nav li {
-    width: auto;
-  }
 
   a {
     box-shadow: 0 8px #DD2476;
   }
 
-  nav a {
-    padding: 7px;
-    border-right: 1px solid #DD2476;
-    width: 80px;
-  }
+  // nav a {
+  //   padding: 7px;
+  //   border-right: 1px solid #DD2476;
+  //   width: 80px;
+  // }
 
-  nav li:nth-child(2n+1) a:after {
-    content: none;
-  }
+  // nav li:nth-child(2n+1) a:after {
+  //   content: none;
+  // }
 
-  nav li:last-child a {
-    border-right: none;
-  }
+  // nav li:last-child a {
+  //   border-right: none;
+  // }
 
   header a:hover, .about a:hover {
     box-shadow: 0 8px #DD2476;
   }
 
-  header a:active, .about a:active {
+  header a:active{
     box-shadow: 0 4px #DD2476;
     -webkit-transform: translateY(4px);
         -ms-transform: translateY(4px);
             transform: translateY(4px);
-  }
-
-  .about .one-third {
-    margin-top: 0;
-  }
-  
-  .about .one-third a {
-    width: 35%;  
-  }
-  
-  .contact .creator a {
-    box-shadow: none;
   }
 
 }
@@ -216,13 +199,4 @@ header {
         -ms-transform: scale(1.15);
             transform: scale(1.15);
   }
-  
-  .contact ul a {
-    margin-left: 45px;
-  }
-
-  .contact ul span {
-    font-size: 3em;
-  }
-
 }
