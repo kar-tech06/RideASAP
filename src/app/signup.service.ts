@@ -9,10 +9,12 @@ import { throwError} from 'rxjs';
   providedIn: 'root'
 })
 export class SignupService {
-  _url='http://localhost:8080/user/register';
+  _url='https://git.heroku.com/enigmatic-bayou-20651.git/user/register';
   constructor(private http:HttpClient) { }
   enroll(user: User)
   {
+    console.log(this._url);
+    
     return this.http.post<any>(this._url, user)
       .pipe(catchError(this.errorHandler))
   }
